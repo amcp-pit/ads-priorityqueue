@@ -35,7 +35,8 @@ jobs:
       - name: Code linting
         uses: amcp-pit/cpp-linter@v1
         with:
-          extra-args-before: '-xc++ --std=c++20'
+          extra-args-before: '-xc++'
+          extra-args: '-std=c++20'
           after-args: '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON'
       - name: Checkout
         uses: actions/checkout@v4
